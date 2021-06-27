@@ -2,22 +2,21 @@ import java.util.*;
 
 public class Level1 {
 
-    public static int squirrel(int N) {
+    public static int odometer(int [] oksana) {
 
-        int f = 1;                        // Factorial of the number.
-        int firstNum = 0;                 // Store first numeral of number.
+        int t = 0;   // Общее количество времени
+        int v = 0;   // Общее количество скорости
 
-        for(int i = 1; i <= N; i++){      // Find the factorial of a number.
-            f *= i;
+        for(int i = 0; i < oksana.length; i++){
+
+            if((i % 2) == 0){
+                v += oksana[i];      // Узнать общее количество скорости
+            }
+            else {
+                t += oksana[i];     // Узнать общее количество времени
+            }
         }
 
-        // To get first numeral of a number.
-        while (f > 0){
-            firstNum = f;                // Keep the previous value of the number.
-            f = (f - (f%10)) / 10;
-        }
-
-        return firstNum;
+        // Общая формула для вычисления скорости.
+        return v * t;
     }
-
-}
