@@ -1,6 +1,6 @@
-package com.company;
+import java.util.*;
 
-public class First_ForGit {
+public class Level1 {
 
     public static int squirrel(int N) {
 
