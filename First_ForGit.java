@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Level1_2 {
+public class Level1 {
 
     public static int odometer(int [] oksana) {
 
